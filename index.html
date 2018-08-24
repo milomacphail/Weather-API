@@ -1,48 +1,30 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>The Weather Today</title>
-			<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+  <html>
+    <head>
+        <title>What is the weather?</title>
+    
+    </head>  
+  
+    
+<body>
+  <div class="container">
+  <div class="title">What's the weather like today?</div>
+  <div class="subtitle"></div>
+  <div class="weather-info">
+    <div id="location" class="info"></div>
+    <div id="temperature" class="info">
+      <span id="temperature-num"></span>
+      <span>°</span>
+      <span id="temperature-scale">C</span>
+    </div>
+    <div id="weather-condition" class="info"></div>
+    <div id="weather-icon" class="info"></div>
+  </div>
+</div>
 
-			<style>
-			.post {
-				border: solid 2px red;
-				padding: 10px;
-			}
-			</style>
-		</head>
-		<body onload="getLocation()">
-		    
-			<div id ="demo">
-				<h1 id="title">Loading...</h1>
-				<p id ="content">This may take a moment.</p>
-			</div>
+   <script type="text/javascript" src="weather.js"></script>
+    
 
-        <script>
-                var x = document.getElementById("demo");
-                function getLocation() {
-                if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-                } else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
-                }
-                }
-                function showPosition(position) {
-                x.innerHTML = "Latitude: " + position.coords.latitude + 
-                "<br>Longitude: " + position.coords.longitude; 
-                }
-        </script>
-                
-        <script>
-				fetch("https://fcc-weather-api.glitch.me/")
-				.then((res) => {
-					return res.json();
-				});
-		</script>
-        
+</body>
 
-		</body>
 </html>
