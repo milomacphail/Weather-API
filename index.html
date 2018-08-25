@@ -2,29 +2,33 @@
   <html>
     <head>
         <title>What is the weather?</title>
-    
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
     </head>  
   
     
 <body>
-  <div class="container">
-  <div class="title">What's the weather like today?</div>
-  <div class="subtitle"></div>
+  <div class="container-fluid">
+  <div id="titlewrapper" class="container-fluid">
+    <h2 class="text-center" id="header">What's the weather like today?</h2>
+  </div>
   <div class="weather-info">
     <div id="location" class="info"></div>
-    <div id="temperature" class="info">
+    <div id="temperature" class="info"></div>
       <span id="temperature-num"></span>
-      <span>°</span>
+      <span>&deg;</span>
       <span id="temperature-scale">C</span>
     </div>
     <div id="weather-condition" class="info"></div>
     <div id="weather-icon" class="info"></div>
+  </div class="togglewrapper">
+    <button id="togglebutton" class="btn btn-info" onclick="toggleScale()">Toggle Temperature Units</button>
   </div>
-</div>
-
    <script type="text/javascript" src="weather.js"></script>
     
-
 </body>
 
 </html>
