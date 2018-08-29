@@ -1,0 +1,24 @@
+#header {
+  font-family: 'Indie Flower', cursive;
+margin-top: 1em;
+  position: relative;
+  font-size: 3em;
+}
+
+#titlewrapper {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTavbyucbsiKYnGudxJSBGYbsi6Nt_ERno-HgcGaFzvSFKDweTJOQ");
+background-size: cover;
+padding: 2em;
+
+}
+
+.innerweather {
+  padding: 2em;
+  text-align: center;
+  
+}
+
+#togglewrapper {
+  display: flex;
+}
+
